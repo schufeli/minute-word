@@ -1,0 +1,19 @@
+# Ignore everything
+*
+
+# Except the license
+LICENSE
+
+# Except the makefiles
+Makefile
+**/*.mk
+
+# Except the followings:
+# - The files and folders that are needed for the project
+
+# All Go files
+!*.go
+
+# Go modules files
+!go.mod
+!go.sum
