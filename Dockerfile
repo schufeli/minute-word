@@ -6,7 +6,8 @@ COPY go.mod .
 RUN go mod download
 
 COPY *.go .
+COPY . .
 
-RUN go build -o main .
+RUN go build -o service .
 
-CMD ["/main"]
+CMD ["./service"]
