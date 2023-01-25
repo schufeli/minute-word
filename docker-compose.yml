@@ -2,8 +2,8 @@ version: "3.9"
 
 services:
   minute-word:
-    container_name: schufeli/minute-word
-    image: minute-word
+    image: schufeli/minute-word
+    container_name: minute-word
     ports:
       - "9000:8000"
     volumes:
