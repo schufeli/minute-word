@@ -30,7 +30,7 @@ API_KEY=<Your API_KEY>
 Run the following command in the directory containing your `docker-compose.yml` and `.env` file. 
 
 ```shell
- docker run --env-file .env (-p "8000:8000") schufeli/minute-word
+ docker run --env-file .env <-p "8000:8000"> schufeli/minute-word
 ```
 
 ### Docker Compose
@@ -38,7 +38,7 @@ Run the following command in the directory containing your `docker-compose.yml` 
 To run the container using [docker-compose](https://docs.docker.com/compose/install/), run the following command in the directory containing your `docker-compose.yml` and `.env` file. 
 
 ```shell
-docker compose up (-d)
+docker compose up <-d>
 ```
 
 ## 🚀 How to use
