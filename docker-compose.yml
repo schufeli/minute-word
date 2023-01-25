@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   minute-word:
-    container_name: minute-word
+    container_name: schufeli/minute-word
     image: minute-word
     ports:
       - "9000:8000"
