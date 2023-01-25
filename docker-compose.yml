@@ -4,7 +4,8 @@ services:
   minute-word:
     image: schufeli/minute-word
     container_name: minute-word
+    env_file: .env
+    environment:
+      - API_KEY=$API_KEY
     ports:
       - "9000:8000"
-    volumes:
-      - "./.env:/app/.env"

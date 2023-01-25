@@ -9,14 +9,11 @@ import (
 )
 
 func main() {
-	err := configuration.LoadEnvironment(".env")
-	if err != nil {
-		logrus.Fatal(err)
-	}
+	configuration.LoadEnvironment(".env")
 
-	logrus.Info("Loaded Envrionment file")
+	logrus.Info("Loaded Envrionment")
 
-	err = configuration.LoadApiKey()
+	err := configuration.LoadApiKey()
 	if err != nil {
 		logrus.Fatal(err)
 	}

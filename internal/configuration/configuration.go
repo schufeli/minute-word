@@ -11,13 +11,8 @@ const URL = "https://dwds.de/random"
 
 var api_key = ""
 
-func LoadEnvironment(filename string) error {
-	err := godotenv.Load(filename)
-	if err != nil {
-		return err
-	}
-
-	return nil
+func LoadEnvironment(filename string) {
+	godotenv.Load(filename)
 }
 
 func LoadApiKey() error {

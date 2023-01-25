@@ -6,13 +6,6 @@ import (
 	"github.com/schufeli/minute-word/internal/configuration"
 )
 
-func TestLoadEnvironment(t *testing.T) {
-	err := configuration.LoadEnvironment("../../.env.example")
-	if err != nil {
-		t.Error(err.Error())
-	}
-}
-
 func TestLoadApiKey(t *testing.T) {
 	configuration.LoadEnvironment("../../.env.example")
 
