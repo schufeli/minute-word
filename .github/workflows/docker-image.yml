@@ -2,13 +2,15 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "fix/fatal-errors-after-daenschis-changes" ]
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
 
-jobs:
+env:
+  API_KEY: "1234"
 
+jobs:
   build:
 
     runs-on: ubuntu-latest
