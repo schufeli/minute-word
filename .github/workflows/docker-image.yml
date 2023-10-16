@@ -2,7 +2,7 @@ name: Docker Build
 
 on:
   push:
-    branches: [ "main", "feature/update-pipeline" ]
+    branches: [ "main" ]
 
 env:
   API_KEY: "1234"
