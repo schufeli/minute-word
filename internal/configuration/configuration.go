@@ -13,6 +13,10 @@ var api_key = ""
 
 func LoadEnvironment(filename string) {
 	godotenv.Load(filename)
+	err := LoadApiKey()
+	if err != nil {
+		panic("could not load config")
+	}
 }
 
 func LoadApiKey() error {
@@ -26,7 +30,6 @@ func LoadApiKey() error {
 	}
 
 	api_key = token
-
 	return nil
 }
 
