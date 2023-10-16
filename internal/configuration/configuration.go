@@ -13,9 +13,15 @@ var api_key = ""
 
 func LoadEnvironment(filename string) {
 	godotenv.Load(filename)
+	err := loadApiKey()
+	if err != nil {
+		logrus.Fatal(err)
+		panic("could not load config",err)
+	}
+	logrus.Info("Loaded Envrionment")
 }
 
-func LoadApiKey() error {
+func loadApiKey() error {
 	token, exists := os.LookupEnv("API_KEY")
 	if !exists {
 		return errors.New("Error environment variable API_KEY is not set")
@@ -26,7 +32,7 @@ func LoadApiKey() error {
 	}
 
 	api_key = token
-
+	logrus.Info("Loaded API_KEY Environment variable")
 	return nil
 }
 

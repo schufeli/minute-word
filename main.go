@@ -11,15 +11,6 @@ import (
 func main() {
 	configuration.LoadEnvironment(".env")
 
-	logrus.Info("Loaded Envrionment")
-
-	err := configuration.LoadApiKey()
-	if err != nil {
-		logrus.Fatal(err)
-	}
-
-	logrus.Info("Loaded API_KEY Environment variable")
-
 	http.HandleFunc("/", server.Handler)
 	http.ListenAndServe(":8000", nil)
 
